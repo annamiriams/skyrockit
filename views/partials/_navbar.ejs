@@ -1,0 +1,14 @@
+<!-- views/partials/_navbar.ejs -->
+
+<!-- named with an underscore that's common to indicate that it is a partial -->
+
+<!-- conditional rendering to identify a user vs a guest -->
+<nav>
+    <% if (user) { %>
+        <a href="/users/<%= user._id %>/applications">Your Apps</a>
+        <a href="/auth/sign-out">Sign Out</a>
+    <% } else { %>
+        <a href="/auth/sign-in">Sign In</a>
+        <a href="/auth/sign-up">Sign Up</a>
+    <% } %>
+</nav>
